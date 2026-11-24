@@ -14,6 +14,7 @@ MAX_CHARS = 200
 def main() -> None:
     assert isinstance(LINE, str)
     assert LINE.strip(), "excuse must not be blank"
+    assert LINE == LINE.strip(), "excuse must not have leading/trailing whitespace"
     assert "\n" not in LINE and "\r" not in LINE, "excuse must be a single line"
     assert 1 <= len(LINE) <= MAX_CHARS, "excuse must be 1-200 characters"
 
